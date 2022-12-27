@@ -1,0 +1,40 @@
+.list-buttons {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.list-buttons__btn {
+  border-style: none;
+  border-radius: var(--button-border-radius);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  margin-bottom: 50px;
+
+  color: var(--portfolio-buttons-color);
+  background-color: var(--portfolio-buttons-background-color);
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.63;
+  transition-property: background-color, color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--cubic-bezier);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--main-color);
+    background-color: var(--text-focus-color);
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}

@@ -1,0 +1,26 @@
+.address__item {
+  font-style: normal;
+  line-height: 1.7;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+}
+.address__link {
+  color: var(--main-color);
+
+  &--style {
+    opacity: 60%;
+  }
+}
+
+// .address__link--style {
+//   opacity: 60%;
+// }
+
+// .address__item:not(:last-child) {
+//   margin-top: 0;
+//   margin-bottom: 9px;
+// }

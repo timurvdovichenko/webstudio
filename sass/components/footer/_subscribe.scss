@@ -1,0 +1,70 @@
+.subscribe {
+  margin-left: auto;
+}
+
+.subcribe__form {
+  display: flex;
+}
+// .subcribe__input::-webkit-input-placeholder {
+//   color: var(--main-color);
+//   opacity: 0.6;
+// }
+// .subcribe__input::-moz-placeholder {
+//   color: var(--main-color);
+//   opacity: 0.6;
+// }
+// .subcribe__input:-ms-input-placeholder {
+//   color: var(--main-color);
+//   opacity: 0.6;
+// }
+.subcribe__input {
+  display: flex;
+  align-items: center;
+
+  height: 50px;
+  margin-right: 12px;
+  padding-left: 16px;
+  width: 360px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: var(--footer-background-color);
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &::-webkit-input-placeholder {
+    color: var(--main-color);
+    opacity: 0.6;
+  }
+  &::-moz-placeholder {
+    color: var(--main-color);
+    opacity: 0.6;
+  }
+  &:-ms-input-placeholder {
+    color: var(--main-color);
+    opacity: 0.6;
+  }
+}
+
+.subscribe__button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 34px;
+  padding-right: 28px;
+
+  text-decoration: none;
+}
+
+.subsribe__button-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  margin-left: 10px;
+  fill: var(--main-color);
+}
