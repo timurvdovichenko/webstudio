@@ -1,31 +1,40 @@
 @import './utils/variables';
-@import './utils/_placeholders';
 @import './base/global';
 @import './base/reset';
-@import './components/common/button';
+
+//common
 @import './components/common/logo';
+@import './components/common/social-icons';
+@import './components/common/button';
 @import './components/common/header';
+
+// page-header
+@import './components/page-header';
 
 @import './components/common/contacts';
 @import './components/common/navigation';
-@import './components/common/social-icons';
 
-@import './components/page-header';
+// mobile menu
+@import './components/mobile-menu';
 
+// modal window
 @import './components/modal/backdrpop';
 @import './components/modal/modal';
 @import './components/modal/term-service';
 
+// sections
 @import './components/hero';
 @import './components/section-advantages';
 @import './components/section-examples';
 @import './components/section-team';
 @import './components/section-clients';
+
+// footer
 @import './components/footer/footer';
 @import './components/footer/address';
 @import './components/footer/footer-header';
 @import './components/footer/subscribe';
 
+// page portfolio
 @import './components/section-portfolio/portfolio';
-
 @import './components/section-portfolio/portfolio-buttons';

@@ -1,7 +1,11 @@
 .modal {
-  width: 528px;
+  width: 450px;
 
   background-color: var(--main-color);
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 .modal--position {
   position: absolute;
@@ -11,7 +15,6 @@
 }
 
 .modal__paragraph {
-  /* margin-top: 40px; */
   display: block;
   margin-bottom: 12px;
   font-size: 20px;
@@ -22,16 +25,16 @@
 .modal__close-button {
   display: block;
 
-  border-style: none;
   height: 30px;
   width: 30px;
+
+  border-style: none;
   border-radius: 50%;
+
   background-color: var(--main-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  /* fill: black; */
   padding: 0;
   cursor: pointer;
-  /* text-align: center; */
   line-height: 0;
 }
 .modal__close-button--position {
@@ -126,9 +129,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
-
   letter-spacing: 0.01em;
-
   color: var(--form-label-text-color);
 }
 .modal__textarea::-webkit-input-placeholder {

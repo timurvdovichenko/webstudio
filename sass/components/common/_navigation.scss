@@ -1,11 +1,16 @@
 .nav__list {
-  display: flex;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .nav__item {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
+
   &--current::after {
     position: absolute;
     transform: translateY(1px);
@@ -17,6 +22,7 @@
     width: 100%;
     height: 4px;
     background-color: var(--text-focus-color);
+
     animation-name: current-after-opacity;
     animation-duration: var(--transition-duration);
     animation-timing-function: var(--cubic-bezier);
@@ -37,6 +43,7 @@
   text-decoration: none;
   line-height: 1.142;
   letter-spacing: 0.02em;
+
   transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--cubic-bezier);
@@ -51,31 +58,6 @@
   }
 }
 
-// .nav__link--current {
-//   color: var(--text-focus-color);
-// }
-// .nav__link:focus,
-// .nav__link:hover {
-//   color: var(--text-focus-color);
-//   fill: var(--text-focus-color);
-// }
-/* curret page dash */
-// .nav__item--current::after {
-//   position: absolute;
-//   transform: translateY(1px);
-
-//   bottom: 0;
-//   border-radius: 2px;
-//   display: block;
-//   content: '';
-//   width: 100%;
-//   height: 4px;
-//   background-color: var(--text-focus-color);
-//   animation-name: current-after-opacity;
-//   animation-duration: var(--transition-duration);
-//   animation-timing-function: var(--cubic-bezier);
-//   animation-fill-mode: forwards;
-// }
 /* animation current page dash */
 @keyframes current-after-opacity {
   0% {

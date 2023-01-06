@@ -1,7 +1,12 @@
 .logo {
   font-family: 'Raleway', sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: var(--font-size-bold);
   text-decoration: none;
-  line-height: 1.2;
+  line-height: calc(28.18 / 24);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }

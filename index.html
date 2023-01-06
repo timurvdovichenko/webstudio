@@ -20,13 +20,11 @@
   </head>
   <body>
     <header class="page-header page-header--border">
-      <!-- main naigation site elements -->
-      <!-- logo element-->
       <div class="container page-header__container">
         <a href="./index.html" class="logo page-header__logo"
           ><span class="logo page-header__logo--spancolor">Web</span>Studio
         </a>
-        <!-- navigation elements -->
+
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item nav__item--current">
@@ -40,11 +38,11 @@
             </li>
           </ul>
         </nav>
-        <!-- contact elements -->
+
         <ul class="contacts list page-header__contacts">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contact__icon contact__icon" width="16" height="12">
+              <svg class="contacts__icon" width="16" height="12">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com
@@ -52,15 +50,77 @@
           </li>
           <li class="contacts__item">
             <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contact__icon contact__icon" width="10" height="16">
+              <svg class="contacts__icon" width="10" height="16">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
+
+        <button type="button" class="mobile-menu-not-open js-open-menu">
+          <svg class="mobile-menu-not-open__icon" width="40" height="40">
+            <use href="./images/icons.svg#menu_not_open"></use>
+          </svg>
+        </button>
       </div>
     </header>
+    <div class="mobile-menu__container">
+      <div class="mobile-menu js-menu-container container">
+        <div class="mobile-menu__top">
+          <button type="button" class="mobile-menu__close-button js-close-menu">
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#close_mobile_menu"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-links list">
+            <li class="mobile-menu-links__item mobile-menu__item--current">
+              <a
+                href="./index.html"
+                class="mobile-menu-links__link mobile-menu-links__link--current"
+                >Студія</a
+              >
+            </li>
+            <li class="mobile-menu-links__item">
+              <a href="./portfolio.html" class="mobile-menu-links__link">Портфоліо</a>
+            </li>
+            <li class="mobile-menu-links__item">
+              <a href="#" class="mobile-menu-links__link">Контакти</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mobile-menu__bottom">
+          <ul class="list mobile-menu-contacts">
+            <li class="mobile-menu-contacts__item">
+              <a href="tel:+380961111111" class="mobile-menu-contacts__link"> +38 096 111 11 11 </a>
+            </li>
+            <li class="mobile-menu-contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-menu-contacts__link mobile-menu-contacts__link--font"
+              >
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="mobile-menu-social list">
+            <li class="mobile-menu-social__item">
+              <a href="#" class="mobile-menu-social__link">Instagram</a>
+            </li>
+            <li class="mobile-menu-social__item">
+              <a href="#" class="mobile-menu-social__link">Twitter</a>
+            </li>
+            <li class="mobile-menu-social__item">
+              <a href="#" class="mobile-menu-social__link">Facebook</a>
+            </li>
+            <li class="mobile-menu-social__item">
+              <a href="#" class="mobile-menu-social__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal modal--position">
         <button
@@ -151,16 +211,11 @@
       <!-- site presentation section -->
       <section class="hero">
         <div class="container">
-          <ul>
-            <li class="hero__item-header">
-              <h1 class="hero__header">Ефективні рішення для вашого бізнесу</h1>
-            </li>
-            <li class="hero__item-button">
-              <button type="button" class="button hero__button" data-modal-open>
-                Замовити послугу
-              </button>
-            </li>
-          </ul>
+          <h1 class="hero__header">Ефективні рішення для вашого бізнесу</h1>
+
+          <button type="button" class="button hero__button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!-- list of advanatages -->
@@ -225,10 +280,14 @@
       <section class="examples section examples_section">
         <div class="container">
           <h2 class="examples__header header">Чим ми займаємося</h2>
-          <!-- pictures work examples -->
+
           <ul class="list examples__list">
             <li class="examples__item">
               <img
+                srcset="
+                  ./images/img_pictures_examples1.jpg    1x,
+                  ./images/img_pictures_examples1@x2.jpg 2x
+                "
                 src="./images/img_pictures_examples1.jpg"
                 alt="людина набирає текст на клавіатурі"
                 width="370"
@@ -239,6 +298,10 @@
             </li>
             <li class="examples__item">
               <img
+                srcset="
+                  ./images/img_pictures_examples2.jpg    1x,
+                  ./images/img_pictures_examples2@x2.jpg 2x
+                "
                 src="./images/img_pictures_examples2.jpg"
                 alt="людина перед ноутбуком зі смартфоном розглядає як виглядають макети відображення матеріалу на смартфоні"
                 width="370"
@@ -249,6 +312,10 @@
             </li>
             <li class="examples__item">
               <img
+                srcset="
+                  ./images/img_pictures_examples3.jpg    1x,
+                  ./images/img_pictures_examples3@x2.jpg 2x
+                "
                 src="./images/img_pictures_examples3.jpg"
                 alt="людина тримає планшет з зображенням"
                 width="370"
@@ -267,10 +334,17 @@
           <ul class="list team__list">
             <li class="team__item">
               <img
+                srcset="
+                  ./images/member1.jpg           270w,
+                  ./images/member1@x2.jpg        540w,
+                  ./images/member1_phone@x1.jpg  450w,
+                  ./images/member1_phone@x2.jpg  900w,
+                  ./images/member1_tablet@x1.jpg 354w,
+                  ./images/member1_tablet@x2.jpg 708w
+                "
+                sizes="(min-width: 1200px) 270px,(min-width: 768px) 354px, (min-width: 480px) 450px,100vw"
                 src="./images/member1.jpg"
                 alt="фото учасника команди"
-                width="270"
-                height="260"
                 class="team__member-img"
               />
               <div class="team__member-card">
@@ -310,10 +384,17 @@
             </li>
             <li class="team__item">
               <img
+                srcset="
+                  ./images/member2.jpg           270w,
+                  ./images/member2@x2.jpg        540w,
+                  ./images/member2_phone@x1.jpg  450w,
+                  ./images/member2_phone@x2.jpg  900w,
+                  ./images/member2_tablet@x1.jpg 354w,
+                  ./images/member2_tablet@x2.jpg 708w
+                "
+                sizes="(min-width: 1200px) 270px,(min-width: 768px) 354px, (min-width: 480px) 450px,100vw"
                 src="./images/member2.jpg"
                 alt="фото учасника команди"
-                width="270"
-                height="260"
                 class="team__member-img"
               />
               <div class="team__member-card">
@@ -353,10 +434,17 @@
             </li>
             <li class="team__item">
               <img
+                srcset="
+                  ./images/member3.jpg           270w,
+                  ./images/member3@x2.jpg        540w,
+                  ./images/member3_phone@x1.jpg  450w,
+                  ./images/member3_phone@x2.jpg  900w,
+                  ./images/member3_tablet@x1.jpg 354w,
+                  ./images/member3_tablet@x2.jpg 708w
+                "
+                sizes="(min-width: 1200px) 270px,(min-width: 768px) 354px, (min-width: 480px) 450px,100vw"
                 src="./images/member3.jpg"
                 alt="фото учасника команди"
-                width="270"
-                height="260"
                 class="team__member-img"
               />
               <div class="team__member-card">
@@ -396,10 +484,17 @@
             </li>
             <li class="team__item">
               <img
+                srcset="
+                  ./images/member4.jpg           270w,
+                  ./images/member4@x2.jpg        540w,
+                  ./images/member4_phone@x1.jpg  450w,
+                  ./images/member4_phone@x2.jpg  900w,
+                  ./images/member4_tablet@x1.jpg 354w,
+                  ./images/member4_tablet@x2.jpg 708w
+                "
+                sizes="(min-width: 1200px) 270px,(min-width: 768px) 354px, (min-width: 480px) 450px,100vw"
                 src="./images/member4.jpg"
                 alt="фото учасника команди"
-                width="270"
-                height="260"
                 class="team__member-img"
               />
               <div class="team__member-card">
@@ -443,7 +538,7 @@
       <section class="clients section">
         <div class="container">
           <h2 class="clients__header header">Постійні клієнти</h2>
-          <ul class="clients__list">
+          <ul class="clients__list list">
             <li class="clients__card">
               <a href="#" target="_blank" rel="noopener noreferrer" class="clients__link"
                 ><svg width="106" height="60">
@@ -492,8 +587,8 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div>
-          <a href="./index.html" class="logo footer-header__logo"
+        <div class="logo_address">
+          <a href="./index.html" class="logo footer__logo"
             ><span class="logo footer__logo--spancolor">Web</span>Studio
           </a>
           <address class="address footer__address">
@@ -522,7 +617,7 @@
         </div>
         <div class="footer__social-icons">
           <h2 class="footer__header">Приєднуйтесь</h2>
-          <ul class="social-icons">
+          <ul class="social-icons list">
             <li class="social-icons__item">
               <a href="#" class="social-icons__icon footer__social-icons--style">
                 <svg width="20" height="20">
@@ -577,5 +672,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

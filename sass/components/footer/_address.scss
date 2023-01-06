@@ -1,11 +1,22 @@
 .address__item {
   font-style: normal;
-  line-height: 1.7;
+  line-height: calc(16 / 14);
   text-decoration: none;
 
-  &:not(:last-child) {
-    margin-top: 0;
-    margin-bottom: 9px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.7;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
 }
 .address__link {
@@ -15,12 +26,3 @@
     opacity: 60%;
   }
 }
-
-// .address__link--style {
-//   opacity: 60%;
-// }
-
-// .address__item:not(:last-child) {
-//   margin-top: 0;
-//   margin-bottom: 9px;
-// }

@@ -4,4 +4,9 @@
   font-weight: var(--font-size-bold);
   text-align: center;
   line-height: 1.166;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 26px;
+    line-height: calc(32.81 / 28);
+  }
 }
