@@ -1,6 +1,7 @@
 .advantages__header {
   display: none;
 }
+
 .advantages__list {
   margin: inherit;
   display: block;
@@ -16,6 +17,7 @@
     flex-wrap: nowrap;
   }
 }
+
 .advantages__item {
   display: block;
 
@@ -41,6 +43,7 @@
     }
   }
 }
+
 .advantages__icon {
   display: flex;
   justify-content: center;

@@ -6,6 +6,7 @@
     flex-wrap: nowrap;
   }
 }
+
 .clients__card {
   display: block;
   width: calc((100% - 2 * 15px) / 2);
@@ -26,6 +27,7 @@
     }
   }
 }
+
 .clients__header {
   margin-top: inherit;
   margin-bottom: 50px;
